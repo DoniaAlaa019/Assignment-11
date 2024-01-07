@@ -37,7 +37,7 @@ function getdate(date1) {
 async function getData(value) {
     if (value == null) {
 
-        const response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=1cf2b4c26b4c4dc294361216240601&q=Cairo&days=3");
+        const response = await fetch("https://api.weatherapi.com/v1/forecast.json?key=1cf2b4c26b4c4dc294361216240601&q=Cairo&days=3");
         const data = await response.json();
         cards.innerHTML = `<div class="col-md-4">
         <div class="weather-card round-1 bg-2">
@@ -99,7 +99,7 @@ async function getData(value) {
 
 
     } else {
-        const response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=1cf2b4c26b4c4dc294361216240601&q=" + value + "&days=3");
+        const response = await fetch("https://api.weatherapi.com/v1/forecast.json?key=1cf2b4c26b4c4dc294361216240601&q=" + value + "&days=3");
 
         if (response.status == 200) {
             const data = await response.json();
